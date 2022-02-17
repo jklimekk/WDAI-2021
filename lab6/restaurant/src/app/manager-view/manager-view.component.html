@@ -1,0 +1,30 @@
+
+<div class="back">
+
+    <h2>Manager dań</h2>
+
+    <main>
+        <h3>Dostępne dania:</h3>
+
+        <section class="list">
+            <div class="dish" *ngFor="let dish of dishes">
+                
+                <div class="card">
+
+                    <h5>{{ dish.name }}</h5>
+
+                    <app-remove-dish [dish]="dish" (itemRemoved)=(onItemRemoved($event)) ></app-remove-dish>
+
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <div class="add-dish">
+        <button class="addDishButton" (click)="showAddForm()">Nowe</button>
+
+        <app-add-dish *ngIf="!hidden" [hidden]="hidden"></app-add-dish>
+    </div>
+
+</div>

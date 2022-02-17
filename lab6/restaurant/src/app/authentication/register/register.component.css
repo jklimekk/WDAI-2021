@@ -1,0 +1,40 @@
+
+main {
+    position: relative;
+    display: flex;
+    height: 93%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url("../../../assets/img/other/back.jpg");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    width: 80%;
+    height: 450px;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+input {
+    margin: 20px;
+    padding: 5px;
+    display: block;
+    width: 95%;
+}
+
+.alert-info {
+    width: 95%;
+    background-color: rgb(255, 121, 121);
+    margin: 20px;
+    padding: 10px;
+}
+
+button {
+    margin-left: 80%;
+}

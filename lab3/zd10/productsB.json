@@ -1,0 +1,35 @@
+{
+    "produktyB": [
+      {
+        "Samochody": [
+            { "nazwa": "Fiat" },
+            { "nazwa": "Mercedes" },
+            { "nazwa": "Audi" },
+            { "nazwa": "Ford" },
+            { "nazwa": "Nissan" },
+            { "nazwa": "Opel" }
+        ]
+      },
+      {
+        "Rowery": [
+            { "nazwa": "Kross" },
+            { "nazwa": "Merida" },
+            { "nazwa": "Góski" }
+        ]
+      },
+      {
+        "Soki": [
+            { "nazwa": "Caprio" },
+            { "nazwa": "Tymbark" },
+            { "nazwa": "Vitaminka" },
+            { "nazwa": "Vitt" }
+        ]
+      },
+      {
+        "Pieczywo": [
+            { "nazwa": "Chleb" },
+            { "nazwa": "Kajzerka" }
+        ]
+      }
+    ]
+}

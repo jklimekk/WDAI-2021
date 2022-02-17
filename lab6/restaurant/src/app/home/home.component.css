@@ -1,0 +1,53 @@
+
+main {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/img/other/back.jpg");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 100%;
+    margin-right: auto;
+    background-color: white;
+    opacity: 0.85;
+    align-self: flex-start;
+    padding: 50px;
+}
+
+.contact {
+    padding: 10px;
+    padding-left: 50px;
+}
+
+.map {
+    width: 700px;
+    height: 300px;
+    margin-top: 2rem;
+    background-image: url("../../assets/img/other/map.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 700px){
+
+    main {
+        height: 95%;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+}

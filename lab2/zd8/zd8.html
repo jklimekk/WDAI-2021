@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 8</title>
+
+    <style>
+
+        body {
+            background-color: rgb(222, 222, 222);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            grid-template-areas:
+                "header header"
+                "leftColumn rightColumn"
+        }
+
+        .header {
+            grid-area: header;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            background-image: linear-gradient(to right, green, lightgreen, blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .leftColumn {
+            grid-area: leftColumn;
+            padding: 30px;
+            color:gray;
+        }
+
+        p1 {
+            font-size: 30px;
+        }
+
+        a {
+            font-size: 20px;
+            color: rgb(36, 218, 178);
+            font-style: normal;
+        }
+
+        .rightColumn {
+            grid-area: rightColumn;
+            position: relative;
+            padding: 30px;
+        }
+
+        .image {
+            box-shadow: 0 4px 8px 0 dimgray, 0 6px 20px 0 dimgray;
+            position: relative;
+            width: 50%;
+        }
+
+        .image:hover {
+            z-index: 2;
+            outline-style: solid;
+            outline-color: rgb(36, 218, 178);
+            outline-width: 15px;
+            outline-offset: 15px;
+            border-radius: 15px;
+        }
+
+        #first {
+            left: 5%;
+            top: 5%;
+        }
+
+        #second {
+            left: 50%;
+            top: -20%;
+        }
+
+        #third {
+            left: 25%;
+            top: -30%;
+        }
+
+        @media (max-width: 1100px) {
+
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "leftColumn"
+                    "rightColumn"
+            }
+            
+            .image {
+                width: 40%;
+            }
+
+            #first {
+                left: 0%;
+                top: 10%;
+            }
+
+            #second {
+                z-index: 1;
+                left: -10%;
+                top: 0%;
+            }
+
+            #third {
+                left: 60%;
+                top: -40%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class = "container">
+
+        <div class = "header">
+            <h1>Ekscytujące kaczki</h1>
+        </div>
+
+        <div class = "leftColumn">
+
+            <div>
+                <p1>TEKST 1</p1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus massa dignissim, consectetur lectus ut, placerat nisi. Sed euismod in eros et laoreet. Proin eget rhoncus nunc, at feugiat nibh. Ut vel consectetur tortor. Ut et ex at urna fermentum fringilla vitae nec lorem. Proin ultricies ex ac erat hendrerit, non ullamcorper risus consectetur. Vestibulum id elit egestas, volutpat augue quis, elementum enim. Quisque porttitor mollis velit, nec ultricies lorem fringilla in.</p>
+            </div>
+            <br>
+
+            <div>
+                <p1>TEKST 2</p1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus massa dignissim, consectetur lectus ut, placerat nisi. Sed euismod in eros et laoreet. Proin eget rhoncus nunc, at feugiat nibh. Ut vel consectetur tortor. Ut et ex at urna fermentum fringilla vitae nec lorem. Proin ultricies ex ac erat hendrerit, non ullamcorper risus consectetur. Vestibulum id elit egestas, volutpat augue quis, elementum enim. Quisque porttitor mollis velit, nec ultricies lorem fringilla in.</p>
+            </div>
+            <br>
+
+            <a href="#zakladka">Więcej &#8594</a>
+
+        </div>
+
+        <div class = "rightColumn">
+
+            <img src="kaczki1.jpg" alt="kaczki1" class="image" id="first">
+            <img src="kaczki2.jpg" alt="kaczki2" class="image" id="second">
+            <img src="kaczki3.jpg" alt="kaczki3" class="image" id="third">
+
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

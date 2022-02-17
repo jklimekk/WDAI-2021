@@ -1,0 +1,48 @@
+
+.back {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.users {
+    width: 100%;
+    overflow: auto;
+    min-height: 50vh;
+    max-height: 65vh;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+}
+
+.card {
+    margin: 5px;
+    padding: 10px;
+    align-self: stretch;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.ban, .manager, .admin {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.ban:hover, .manager:hover, .admin:hover {
+    background-color: lightgray;
+}

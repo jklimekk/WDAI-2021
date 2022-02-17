@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+
+        <div class="phonebook">
+
+            <!-- Przykładowy domyślny rekord, który również można usunąć przyciskiem -->
+            <div class="record">
+                <div class="content">
+                    <p class="name">Joanna Klimek</p>
+                    <p>123456789</p>
+                </div>
+                <button class="button">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="phonebook-form">
+
+            <form>
+                <div class="form-element">
+                    <label for="name">Imię i Nazwisko</label>
+                    <input type="text" id="name">
+                </div>
+
+                <div class="form-element">
+                    <label for="phone">Telefon</label>
+                    <input type="text" id="phone">
+                </div>
+
+                <button class="add-button">Dodaj</button>
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

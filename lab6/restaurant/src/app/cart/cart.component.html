@@ -1,0 +1,32 @@
+<main class="container">
+
+    <div class="cart">
+        <h3><b>Koszyk:</b></h3>
+        <hr>
+        
+
+        <section class="cart-list">
+
+            <table class="cart-table">
+              <tr>
+                <th style="width:70%">Danie</th>
+                <th>Ilość</th>
+                <th>Cena</th>
+              </tr>
+              <tr *ngFor="let cartElement of cartElements">
+                <td style="width:70%">{{cartElement.dish.name}}</td>
+                <td>{{cartElement.quantity}} szt.</td>
+                <td>{{cartElement.dish.price}} zł</td>
+              </tr>
+            </table>
+
+        </section>
+
+        <hr>
+        <div class="summary">
+            <div class="totalprice"><b>Do zapłaty:</b> {{price}} zł</div>
+            <button class="buy-btn" type="submit">Purchase</button>
+        </div>
+    </div>
+
+</main>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 1</title>
+
+    <style>
+        
+        .container {
+            border-style: solid;
+            border-width: 2px;
+            width: 100%;
+            min-height: 700px;
+            background: Gray;
+            display: grid;
+            grid-template-columns: 30% 50% auto;
+            grid-template-rows: 2fr 1fr 4fr 1fr;
+            grid-gap: 2px;
+            grid-template-areas:
+                "header header header"
+                "menu menu menu"
+                "leftColumn content rightColumn"
+                "footer footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            padding: 20px;
+        }
+
+        .logo {
+            border-style: solid;
+            border-width: 2px;
+            border-color: black;
+            background-color: white;
+            height: 90%;
+            width: 400px;
+            padding: 5px;
+        }
+
+        .menu {
+            background-color: white;
+            grid-area: menu;
+            padding: 5px;
+        }
+
+        .leftColumn {
+            background-color: white;
+            grid-area: leftColumn;
+            padding: 5px;
+        }
+
+        .content {
+            background-color: white;
+            grid-area: content;
+            padding: 5px;
+        }
+
+        .rightColumn {
+            background-color: white;
+            grid-area: rightColumn;
+            border-style: solid;
+            border-width: 3px;
+            padding: 5px;
+        }
+
+        .footer{
+            grid-area: footer;
+            padding: 5px;
+        }
+
+
+    @media (max-width: 1000px){
+        .container{
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 2fr 1fr 4fr 4fr 1fr;
+            grid-template-areas:
+                "header header"
+                "menu menu"
+                "leftColumn content"
+                "rightColumn rightColumn"
+                "footer footer";
+        }
+    }
+
+    @media (max-width: 700px){
+        .container{
+            grid-template-columns: 100%;
+            grid-template-rows: 2fr 1fr 4fr 4fr 4fr 1fr;
+            grid-template-areas:
+                "header"
+                "menu"
+                "leftColumn"
+                "content"
+                "rightColumn"
+                "footer";
+        }
+
+        .logo {
+            display: none;
+        }
+    }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class = "container">
+        <div class = "header">
+            <div class = "logo">logo</div>
+        </div>
+        <div class = "menu">menu</div>
+        <div class = "leftColumn">lewa kolumna</div>
+        <div class = "content">zawartość strony</div>
+        <div class = "rightColumn">prawa kolumna</div>
+        <div class = "footer">stopka</div>
+    </div>
+    
+</body>
+</html>

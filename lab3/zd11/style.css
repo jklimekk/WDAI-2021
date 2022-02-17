@@ -1,0 +1,68 @@
+
+.gameArea {
+    width: 1200px;
+    height: 800px;
+    margin: auto;
+    border: 10px solid black;
+    background-image: url(images/board-bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    cursor: crosshair;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.score {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+.zombie {
+    cursor: crosshair;
+    width: 200px;
+    height: 312px;
+    background: url(images/walkingdead.png);
+    position: absolute;
+    left: 110%;
+    bottom: 100px;
+    animation: animation 0.5s 0s infinite steps(9), walking 10s 0s 1 linear;
+
+}
+
+@keyframes animation {
+    100% {
+        background-position: -1800px 0;
+    }
+}
+
+@keyframes walking {
+    100% {
+        left: -300px;
+    }
+}
+
+#wrapper{
+    height: 300px;
+    width: 400px;
+    margin: auto;
+    background-color: lightgray;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+#wrapper:hover{
+    cursor: default; 
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<!-- zmiana z postaci na zdjeciu a. na postac ze zdjecia b. nastepuje gdy szerokosc okna zmniejsza sie ponizej 700px -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Alignment: aligning individual items on the cross axis</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+      .box {
+        display: flex;
+        /*flex-direction: column;*/
+        background-color: white;
+        border-style: solid;
+        border-color: blue;
+      }
+
+      .box > div {
+        background-color: lightblue;
+        width: 200px;
+        height: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        border-style: solid;
+        border-color: blue;
+      }
+
+      
+      div div:first-child {
+        height: 300px;
+      }
+
+      div div:nth-child(3) {
+        align-self: center;
+      }
+
+      @media (max-width: 700px){
+        .box {
+          flex-direction: column;
+        }
+
+        div div:first-child {
+          height: 100px;
+          width: 95%;
+        }
+
+      }
+
+    </style>
+</head>
+
+<body>
+
+  <section>
+
+    <div class="box">
+      <div>One</div>
+      <div>Two</div>
+      <div class="selected">Three</div>
+      <div>Four</div>
+    </div>
+
+  </section>
+
+</body>
+
+</html>

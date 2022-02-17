@@ -1,0 +1,32 @@
+
+body {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+div#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background-color: #C0C0C0;
+    font-size: 25px;
+}

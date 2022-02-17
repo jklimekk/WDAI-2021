@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 7</title>
+
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        .menu {
+            position: fixed;
+            width: 100%;
+            background-color: lightskyblue;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .icon {
+            position: relative;
+            padding: 30px 30px;
+            float: right;
+            user-select: none;
+        }
+
+        .menu-list {
+            max-height: 0;
+            margin: 0;
+            padding: 0;
+            clear: both;
+            overflow: hidden;
+            list-style: none;
+            transition: max-height .4s ease-out;
+        }
+
+        a {
+            display: block;
+            padding: 20px 20px;
+            color: black;
+            text-decoration: none;
+        }
+
+        li a:hover, .checkbox:hover {
+            background-color: rgb(85, 161, 209);
+        }
+
+        @media (min-width: 800px) {
+
+            .menu-list {
+                float: right;
+                clear: none;
+                max-height: none;
+            }
+
+            li {
+                float: left;
+            }
+
+            .icon {
+                display: none;
+            }
+        }
+
+        /* niewidoczny checkbox do trzymania stanu */
+
+        .checkbox {
+            display: none;
+        }
+
+        /* ikona menu wyswietlana zamiast checkboxa */
+
+        .icon .navicon {
+            display: block;
+            position: relative;
+            height: 3px;
+            width: 20px;
+            background: black;
+            transition: background .3s ease-out;
+        }
+
+        .icon .navicon:before, .icon .navicon:after {
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: black;
+            content: '';
+            transition: all .3s ease-out;
+        }
+
+        .icon .navicon:before {
+            top: 8px;
+        }
+
+        .icon .navicon:after {
+            top: -8px;
+        }
+
+        /* zmiana stanu - animacja ikony oraz rozwiniecie menu */
+
+        .checkbox:checked ~ .icon .navicon {
+            background: transparent;
+        }
+
+        .checkbox:checked ~ .icon .navicon:before {
+            transform: rotate(45deg);
+        }
+
+        .checkbox:checked ~ .icon .navicon:after {
+            transform: rotate(-45deg);
+        }
+
+        .checkbox:checked ~ .icon:not(.steps) .navicon:before, .checkbox:checked ~ .icon:not(.steps) .navicon:after {
+            top: 0;
+        }
+
+        .checkbox:checked ~ .menu-list {
+            max-height: 500px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <a href="#logo" class="logo">Logo</a>
+
+        <input class="checkbox" type="checkbox" id="checkbox"/>
+        
+        <label class="icon" for="checkbox">
+            <span class="navicon"></span>
+        </label>
+
+        <ul class="menu-list">
+            <li><a href="#zakladka1">Zakładka1</a></li>
+            <li><a href="#zakladka2">Zakładka2</a></li>
+            <li><a href="#zakladka3">Zakładka3</a></li>
+            <li><a href="#zakladka4">Zakładka4</a></li>
+            <li><a href="#zakladka5">Zakładka5</a></li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

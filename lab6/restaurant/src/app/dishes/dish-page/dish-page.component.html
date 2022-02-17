@@ -1,0 +1,59 @@
+
+<div class="back">
+
+    <main class="container">
+
+        <div class="left">
+
+            <div class="image-container">
+                <img id="img" src="assets/img/dishes/{{dish.photos.split(',')[0]}}" alt="image"
+                            [ngClass]="{'outofstock': (dish.amount-dish.ordered)==0}">
+            </div>
+
+            <div class="link">
+                <a routerLink="../../dishes">Powrót</a>
+            </div>
+
+            <div class="buttons">
+                <app-items [currentDish]="dish"></app-items>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <h1>{{dish.name}}</h1>
+
+            <section class="info">
+                <h5><b>Kuchnia:</b> {{dish.cuisine}}</h5>
+                <h5><b>Typ:</b> {{dish.type}}</h5>
+                <h5><b>Kategoria:</b> {{dish.type}}</h5>
+            </section>
+
+            <hr>
+
+            <section class="details">
+                <h5><b>Opis:</b></h5>
+                <p class="description">{{dish.description}}</p>
+
+                <h5><b>Składniki:</b></h5>
+                <ul class="ingredients">
+                    <li *ngFor="let ingredient of dish.ingredients.split(',')">
+                        {{ingredient}}
+                    </li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <div class="price"><h5><b>Cena:</b> {{dish.price}} zł</h5></div>
+            <div class="stock"><h5><b>Na stanie:</b> {{dish.amount-dish.ordered}} szt.</h5></div>
+
+        </div>
+
+        <div class="reviews">
+            <app-reviews (counterChange)="setReviewCounter($event)"></app-reviews>
+        </div>
+
+    </main>
+
+</div>

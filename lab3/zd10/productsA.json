@@ -1,0 +1,30 @@
+{
+    "produktyA": [
+      {
+        "Samochody": [
+            { "nazwa": "Fiat" },
+            { "nazwa": "BMW" },
+            { "nazwa": "Mercedes" },
+            { "nazwa": "Lamborgini" }
+        ]
+      },
+      {
+        "Hulajnogi": [
+        ]
+      },
+      {
+        "Słodycze": [
+            { "nazwa": "Czekolada" },
+            { "nazwa": "Cukierki" },
+            { "nazwa": "Lizaki" }
+        ]
+      },
+      {
+        "Soki": [
+            { "nazwa": "Jupik" },
+            { "nazwa": "Kubuś" },
+            { "nazwa": "Hoop" }
+        ]
+      }
+    ]
+}

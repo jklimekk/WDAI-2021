@@ -1,0 +1,31 @@
+<div class="back">
+    <div class="container"> 
+
+        <div class="card" *ngFor="let dish of dishes" [ngClass]="{'biggestprice': dish.key==smallPrice.key,
+                                                                    'smallestprice': dish.key==biggestPrice.key,
+                                                                    'amount': (dish.amount-dish.ordered) <= 5 }">
+            
+            <div class="image-container">
+                <a (click)="setDish(dish)" [routerLink]="['/dish', dish.name]">
+                    <img id="img" alt="image" src="../../assets/img/dishes/{{dish.photos.split(',')[0]}}"
+                                [ngClass]="{'outofstock': (dish.amount-dish.ordered)==0}">
+                </a>
+            </div>
+
+            <div class="description">
+
+                <h4>Danie: {{dish.name}}</h4>
+
+                <div class="price"><b>Cena:</b> {{dish.price}} zł</div>
+                <div class="instock"><b>Na stanie:</b> {{dish.amount-dish.ordered}} szt.</div>
+
+                <div class="buttons">
+                    <app-items [currentDish]="dish"></app-items>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

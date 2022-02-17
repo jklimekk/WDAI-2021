@@ -1,0 +1,54 @@
+<nav>
+    <ul class="menu-list">
+
+        <a class="full" routerLink=""><li routerLinkActive="active" class="home">Home</li></a>
+        <a class="full" routerLink="dishes"><li routerLinkActive="active">Menu</li></a>
+
+        <ng-container *ngIf="authService.signedIn">
+
+            <a class="full" routerLink="cart"><li routerLinkActive="active">Cart</li></a>
+            <a class="full" routerLink="managerview" *ngIf="authService.manager && !authService.admin"><li routerLinkActive="active">Dishes manager</li></a>
+
+            <ng-container *ngIf="authService.admin">
+                <a class="full" routerLink="adminview"><li routerLinkActive="active">Admin view</li></a>
+                <a class="full" routerLink="managerview"><li routerLinkActive="active">Dishes manager</li></a>
+            </ng-container>
+
+            <button class="full logout" (click)="signout()">Logout<br></button>
+
+        </ng-container>
+
+        <ng-container class="right" *ngIf="!authService.signedIn">
+
+            <a class="full login" routerLink="login"><li routerLinkActive="active">Login</li></a>
+            <a class="full register" routerLink="register"><li routerLinkActive="active">Register</li></a>
+
+        </ng-container>
+
+        
+        <div class="part-menu-list">
+
+            <input id="part-check" type="checkbox">
+            <label for="part-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <section class="part-list">
+
+                <a class="part-list-item" routerLink=""><div>Home</div></a>
+                <a class="part-list-item" routerLink="dishes"><div>Dishes</div></a>
+                <a class="part-list-item" routerLink="cart" *ngIf="authService.signedIn"><div>Cart</div></a>
+                <a class="part-list-item" routerLink="managerview" *ngIf="authService.signedIn && authService.manager && !authService.admin"><div>Dish Manager</div></a>
+                <a class="part-list-item" routerLink="adminview" *ngIf="authService.signedIn && authService.admin"><div>Admin view</div></a>
+                <a class="part-list-item" routerLink="managerview" *ngIf="authService.signedIn && authService.admin"><div>Dish Manager</div></a>
+                <a class="part-list-item" routerLink="login" *ngIf="!authService.signedIn"><div>Login</div></a>
+                <a class="part-list-item" routerLink="register" *ngIf="!authService.signedIn"><div>Register</div></a>
+                <a class="part-list-item" (click)="signout()" *ngIf="authService.signedIn"><div>Logout<br></div></a>
+
+            </section>
+        </div>
+
+    </ul>
+</nav>

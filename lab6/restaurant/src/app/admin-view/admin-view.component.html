@@ -1,0 +1,37 @@
+
+<div class="back">
+
+    <h2>Administracja</h2>
+
+
+    <main class="container">
+        
+        <app-persistence></app-persistence>
+    
+        <h4>Użytkownicy:</h4>
+        <section class="users">
+            <div class="user" *ngFor="let user of users">
+
+                <div class="card">
+                    <span class="email"><b>Email: </b>{{ user.mail }}<br><br><b>Przydzielone role:</b></span>
+                    <div class="roles">
+                        <span *ngIf="user.manager">manager </span>
+                        <span *ngIf="user.admin">admin </span>
+                        <span *ngIf="!user.admin && !user.manager">client </span>
+                    </div>
+                </div>
+
+                <button class="ban" (click)="ban(user)" *ngIf="!user.banned">zbanuj</button>
+                <button class="ban" (click)="unban(user)" *ngIf="user.banned">odbanuj</button>
+                
+                <button class="manager" (click)="makeManager(user)" *ngIf="!user.manager">nadaj managera</button>
+                <button class="manager" (click)="unmakeManager(user)" *ngIf="user.manager">zabierz managera</button>
+
+                <button class="admin" (click)="makeAdmin(user)" *ngIf="!user.admin">nadaj admina</button>
+                <button class="admin" (click)="unmakeAdmin(user)" *ngIf="user.admin">zabierz admina</button>
+
+            </div>
+        </section>
+    </main>
+
+</div>

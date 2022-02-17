@@ -1,0 +1,49 @@
+
+body {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0px;
+    justify-content: center;
+}
+
+#left-column {
+    width: 400px;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+#right-column {
+    width: 400px;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+#title {
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+p {
+    font-size: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+input:checked {
+    border: solid blue;
+}
+
+.img {
+    width: 15px;
+    transform: rotate(90deg);
+}
+
+.img-collapsed {
+    width: 15px;
+}

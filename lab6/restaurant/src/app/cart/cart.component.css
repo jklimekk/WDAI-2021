@@ -1,0 +1,72 @@
+
+.container {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+.cart {
+    width: 90%;
+    height: 850px;
+    background-color: lightgray;
+    box-shadow: 5px 5px 5px gray;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    padding: 30px;
+}
+
+.cart-list {
+    height: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: auto;
+    box-shadow: inset 1px 0 5px lightgrey;
+    font-size: 20px;
+}
+
+.cart-table {
+    width:100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+th {
+    background-color: gray;
+}
+
+td {
+    background-color: white;
+}
+
+.summary {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.totalprice {
+    align-self: flex-start;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.buy-btn {
+    align-self: flex-end;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+
+.buy-btn:hover{
+    background-color: gray;
+}

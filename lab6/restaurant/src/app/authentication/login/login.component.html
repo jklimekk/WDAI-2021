@@ -1,0 +1,26 @@
+<main>
+    <section class="container">
+        <h4>Logowanie</h4>
+
+        <form id="loginform" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <hr>
+
+            <input type="email" formControlName="email" placeholder="Email">
+            <input type="password" formControlName="password" placeholder="Hasło">
+
+            <hr>
+            
+            <button type="submit" [disabled]="!form.valid">OK</button>
+
+            <div class="alert-info" *ngIf="form.controls['email'].hasError('required') || form.controls['password'].hasError('required')">
+                Pamiętaj aby uzupełnić wszystkie pola.
+            </div>
+
+            <div class="alert-info"*ngIf="form.controls['email'].hasError('email')">
+                Błędny adres e-mail.
+            </div>
+
+        </form>
+    </section>
+</main>

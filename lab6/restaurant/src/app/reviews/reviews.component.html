@@ -1,0 +1,52 @@
+<main class="container">
+
+    <h4>Twoja recenzja:</h4>
+
+    <form id="reviewform" [formGroup]="addReviewForm" (ngSubmit)="onSubmit()">
+
+        <input type="text" formControlName="name" placeholder="Nick">
+        <input type="text" formControlName="title" placeholder="Tytuł">
+
+        <textarea form="reviewform" formControlName="content" placeholder="Treść"></textarea>
+        
+        <label for="">Data zamówienia: <input type="date" class="form-control" formControlName="date" placeholder="Data zakupu">
+        </label>
+
+        <button type="submit" class="add" [disabled]="!addReviewForm.valid">Dodaj</button>
+
+
+        <div *ngIf="addReviewForm.controls['name'].hasError('required') || 
+                    addReviewForm.controls['title'].hasError('required') ||
+                    addReviewForm.controls['content'].hasError('required') ||
+                    addReviewForm.controls['date'].hasError('required')"          
+            class="alert-info">Pamiętaj o uzupełnieniu wszystkich pól.</div>
+
+        <div *ngIf="addReviewForm.controls['content'].hasError('minlength') ||
+                    addReviewForm.controls['content'].hasError('maxlength')" class="alert-info">
+            Długość opisu powinna się zawierać w przedziale 10-200 znaków.
+        </div>
+
+    </form>
+</main>
+
+
+<main class="reviews-container">
+
+    <h4>Recenzje dania:</h4>
+
+    <div class="reviews">
+
+        <ul class="list">
+            <li class="list-elem" *ngFor="let review of reviewsList">
+
+                <h4><b>Nick: </b>{{review.name | titlecase }}</h4>
+                <h5><b>Data: </b>{{review.date}}</h5>
+                <h6><b>Tytuł: </b>{{review.title}}</h6>
+
+                <h6><b>Opis: </b></h6>
+                <section class="content">{{review.content}}</section>
+            </li>
+
+        </ul>
+    </div>
+</main>

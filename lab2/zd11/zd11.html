@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 11</title>
+
+    <style>
+
+        body {
+            background-color: rgb(139, 255, 139);
+        }
+
+        .navbar {
+            width : 300px; 
+            margin : 50px auto;
+        }
+
+        .navbar label:first-child span {
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .navbar > span {
+            border-radius: 0px 0px 15px 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background: rgb(40, 40, 146);
+        }
+
+        li a {
+            text-decoration: none;
+            color : white;
+        }
+
+        li:hover {
+            background: linear-gradient(180deg, rgb(40, 40, 146) 50%, rgb(75, 75, 139) 50%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 5% 50%);
+        }
+
+        span {
+            padding : 20px 30px;
+            background : rgb(228, 99, 52); 
+            color : white;
+            font-size : 20px;
+            cursor : pointer;
+            display: block;
+        }
+
+        .first-slide, .second-slide, .third-slide {
+            clear: both;
+            width: 100%;
+            max-height: 0px;
+            overflow: hidden;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .first-slide li, .second-slide li, .third-slide li {
+            padding : 20px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+        }
+
+        #first, #second, #third, #fourth {
+            position: absolute;
+            opacity: 0;
+            height: 0px;
+        }    
+
+        #first:checked + .first-slide {
+            max-height: 300px;
+        }
+
+        #second:checked + .second-slide {
+            max-height: 300px;
+        } 
+
+        #third:checked + .third-slide {
+            max-height: 300px;
+        }
+
+        .arrow-down {
+            position: absolute;
+            margin-left: 250px;
+            width: 0; 
+            height: 0; 
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid rgb(228, 99, 52); 
+            overflow: hidden;
+            z-index: 1;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <label for="first"><span>My Account</span></label>
+        <div class="arrow-down"></div>
+        <input type="checkbox" id="first">
+
+        <ul class="first-slide">
+            <li><a href="#">item-1</a></li>
+            <li><a href="#">item-2</a></li>
+            <li><a href="#">item-3</a></li>
+        </ul>
+
+        <label for="second"><span>About</span></label>   
+        <div class="arrow-down"></div>            
+        <input type="checkbox" id="second"> 
+
+        <ul class="second-slide">
+            <li><a href="#">item-1</a></li>
+            <li><a href="#">item-2</a></li>
+        </ul>
+
+        <label for="third"><span>Support</span></label>   
+        <div class="arrow-down"></div>            
+        <input type="checkbox" id="third"> 
+
+        <ul class="third-slide">
+            <li><a href="#">item-1</a></li>
+        </ul>
+
+        <span>Log Out</span> 
+
+    </div> 
+    
+</body>
+
+</html>

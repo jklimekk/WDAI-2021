@@ -1,0 +1,48 @@
+
+.container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    margin-left: 400px;
+}
+
+h5 {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    width: 50%;
+    height: 600px;
+    margin-top: 150px;
+    padding: 20px;
+    overflow: auto;
+    box-shadow: 1px 0 10px lightgrey;
+    z-index: 1;
+    background-color: lightgray;
+}
+
+form {
+    position: relative;   
+}
+
+.alert-info {
+    width: 95%;
+    background-color: rgb(255, 121, 121);
+    margin: 20px;
+    padding: 10px;
+}
+
+.add {
+    position: absolute;
+    bottom: -50px;
+    right: 10px;
+}
+
+.show { 
+    display: flex;
+} 
+
+.hidden {
+    display: none;
+}

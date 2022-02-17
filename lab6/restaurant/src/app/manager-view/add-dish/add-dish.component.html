@@ -1,0 +1,59 @@
+<main class="container" [ngClass]="{'show': !hidden, 'hidden': hidden}">
+
+    <div class="form-container" >
+
+        <h5>Nowe danie:</h5>
+
+        <form [formGroup]="addDishForm" (ngSubmit)="onSubmit()">
+
+            <div *ngIf="addDishForm.controls['name'].hasError('required') ||
+                        addDishForm.controls['cuisine'].hasError('required') ||
+                        addDishForm.controls['type'].hasError('required') ||
+                        addDishForm.controls['category'].hasError('required') ||
+                        addDishForm.controls['ingredients'].hasError('required') ||
+                        addDishForm.controls['amount'].hasError('required') ||
+                        addDishForm.controls['price'].hasError('required') ||
+                        addDishForm.controls['photos'].hasError('required')" class="alert-info">
+                Pamiętaj aby uzupełnić wszystkie pola.
+            </div>
+
+            <div *ngIf="addDishForm.controls['name'].hasError('minlength') ||
+                        addDishForm.controls['name'].hasError('maxlength')" class="alert-info">
+                Nazwa powinna zawierać od 2 do 20 znaków.
+            </div>
+
+            <div *ngIf="addDishForm.controls['cuisine'].hasError('minlength') ||
+                        addDishForm.controls['cuisine'].hasError('maxlength')" class="alert-info">
+                Typ kuchni powinien zawierać od 2 do 20 znaków.
+            </div>
+
+            <div *ngIf="addDishForm.controls['type'].hasError('minlength') ||
+                        addDishForm.controls['type'].hasError('maxlength')" class="alert-info">
+                Typ kuchni powinien zawierać od 2 do 20 znaków.
+            </div>
+
+            <div *ngIf="addDishForm.controls['category'].hasError('minlength') ||
+                        addDishForm.controls['category'].hasError('maxlength')" class="alert-info">
+                Typ kuchni powinien zawierać od 2 do 20 znaków.
+            </div>
+
+            <div *ngIf="addDishForm.controls['photos'].hasError('pattern')" class="alert-info">
+                Błędny format pliku zdjęcia.
+            </div>
+
+            <input type="text" class="form-control" formControlName="name" placeholder="Nazwa pozycji">
+            <input type="text" class="form-control" formControlName="cuisine" placeholder="Typ kuchni">
+            <input type="text" class="form-control" formControlName="type" placeholder="Typ dania">
+            <input type="text" class="form-control" formControlName="category" placeholder="Kategoria">
+            <input type="text" class="form-control" formControlName="ingredients" placeholder="Składniki">
+            <input type="number" class="form-control" formControlName="amount" placeholder="Ilość w magazynie">
+            <input type="number" class="form-control" formControlName="price" placeholder="Cena">
+            <input type="textarea" class="form-control" formControlName="description" placeholder="Opis">
+            <input type="text" class="form-control" formControlName="photos" placeholder="Zdjęcia">
+
+            <button type="submit" [disabled]="!addDishForm.valid" class="add">Dodaj</button>
+
+        </form>
+
+    </div>
+</main>

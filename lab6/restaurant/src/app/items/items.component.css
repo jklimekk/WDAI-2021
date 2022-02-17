@@ -1,0 +1,14 @@
+
+.container {
+    display: flex;
+}
+
+.mybtn {
+    background-color: lightgray;
+    display: block;
+    margin-right: 10px;
+}
+
+.mybtn:hover {
+    background-color: gray;
+}

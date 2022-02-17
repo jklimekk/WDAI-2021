@@ -1,0 +1,8 @@
+
+<div class="container">
+
+    <button type="submit" class="mybtn" (click)="addDish(currentDish)"
+            [ngClass]="{'disabled': (currentDish.amount-currentDish.ordered)==0}"> Add </button>
+
+    <button type="submit" class="mybtn"(click)="deleteDish(currentDish)"> Remove </button>
+</div>

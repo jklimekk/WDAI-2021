@@ -1,0 +1,97 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
+
+.header div {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 4px;
+    background-color: rgb(100, 162, 255);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 600px;
+    height: 650px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 3px 3px 8px 5px lightgray;
+}
+
+.mySlides {
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+
+.img {
+    margin: 20px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 5px -5px rgb(100, 162, 255);
+}
+.add {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    background-color: rgb(100, 162, 255);
+    font-size: 30px;
+    color: white;
+}
+
+p.name {
+    font: normal normal bold 20px Verdana;
+    color: black;
+}
+
+p.title {
+    font: normal small-caps bold 15px Verdana;
+    color: rgb(100, 162, 255);
+}
+
+p.description {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: gray;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.button {
+    margin: 10px;
+}
+
+#random {
+    display: block;
+    background-color: rgb(184, 228, 255);
+    border-color: rgb(100, 162, 255);
+    color: rgb(100, 162, 255);
+    padding: 5px;
+}
+
+#left, #right {
+    display: inline-block;
+    font-size: 30px;
+    color: rgb(100, 162, 255);
+    cursor: pointer;
+}

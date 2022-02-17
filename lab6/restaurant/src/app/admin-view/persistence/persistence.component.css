@@ -1,0 +1,11 @@
+
+.persistence {
+    margin-bottom: 50px;
+}
+
+button {
+    width: 100px;
+    height: 35px;
+    background-color: lightgrey;
+    margin: 10px;
+}
