@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+
+    <style>
+
+    .container {
+        width: 94%;
+        margin: 3%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+
+    .card {
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 darkslategrey, 0 6px 20px 0 darkslategrey;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-areas: 
+            "photo photo"
+            "description description"
+            "button comments";
+    }
+
+    .photo {
+        grid-area: photo;
+    }
+
+    img {
+        border-radius: 15px 15px 0px 0px;
+        max-width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .description {
+        grid-area: description;
+        margin: 20px;
+    }
+
+    .button {
+        grid-area: button;
+        margin: 20px
+    }
+    
+    button {
+        padding: 16px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: salmon; 
+        color: white;
+        border: none;
+    }
+
+    .comments {
+        grid-area: comments;
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 35px;
+    }
+
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        color:darksalmon;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+
+    @media (min-width: 700px){
+        .container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (min-width: 1050px){
+        .container {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class = "container">
+
+        <!-- Karta nr 1 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto1.jpg" alt = "photo1">
+            </div>
+            <div class = "description">
+                <h1>Miasto 1</h1>
+                <h2>Opis 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+        <!-- Karta nr 2 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto2.jpg" alt = "photo2">
+            </div>
+            <div class = "description">
+                <h1>Miasto 2</h1>
+                <h2>Opis 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+        <!-- Karta nr 3 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto3.jpg" alt = "photo3">
+            </div>
+            <div class = "description">
+                <h1>Miasto 3</h1>
+                <h2>Opis 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+        <!-- Karta nr 4 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto4.jpg" alt = "photo4">
+            </div>
+            <div class = "description">
+                <h1>Miasto 4</h1>
+                <h2>Opis 4</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+        <!-- Karta nr 5 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto5.jpg" alt = "photo5">
+            </div>
+            <div class = "description">
+                <h1>Miasto 5</h1>
+                <h2>Opis 5</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+        <!-- Karta nr 6 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto6.jpg" alt = "photo6">
+            </div>
+            <div class = "description">
+                <h1>Miasto 6</h1>
+                <h2>Opis 6</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+        <!-- Karta nr 7 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto7.jpg" alt = "photo7">
+            </div>
+            <div class = "description">
+                <h1>Miasto 7</h1>
+                <h2>Opis 7</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+        <!-- Karta nr 8 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto8.jpg" alt = "photo8">
+            </div>
+            <div class = "description">
+                <h1>Miasto 8</h1>
+                <h2>Opis 8</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+        <!-- Karta nr 9 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto9.jpeg" alt = "photo9">
+            </div>
+            <div class = "description">
+                <h1>Miasto 9</h1>
+                <h2>Opis 9</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+        <!-- Karta nr 10 --> 
+        <div class = "card">
+            <div class = "photo">
+                <img src = "resources/miasto10.jpg" alt = "photo10">
+            </div>
+            <div class = "description">
+                <h1>Miasto 10</h1>
+                <h2>Opis 10</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget arcu sed augue porta facilisis. Nullam lorem ex, bibendum non lorem quis, pharetra ultrices felis. Integer commodo diam sed posuere faucibus. Duis ultrices nec risus a varius. Donec sed bibendum orci, quis condimentum purus. Aliquam gravida felis et finibus molestie. Aliquam mollis turpis non ante dapibus ornare. Vestibulum vulputate ex ut porta euismod. Sed imperdiet blandit leo, nec tempor ipsum.
+                </p>
+            </div>
+            <div class = "button">
+                <button>Read Article</button>
+            </div>
+            <div class = "comments">
+                <p>&#128172 16 comments<br>&#10084 25 likes</p>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>
